@@ -2,3 +2,6 @@
 *.pyc
 */__pycache__/*
 c2nl/*/__pycache__/*
+*.DS_Store
+tmp/
+c2nl.egg-info/
