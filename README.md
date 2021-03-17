@@ -1,15 +1,17 @@
 ## A Transformer-based Approach for Source Code Summarization
 Official implementation of our ACL 2020 paper on Source Code Summarization. [[arxiv](https://arxiv.org/abs/2005.00653)]
 
-### Installing C2NL
+
 
 ### Notes
 
-1. Download Pretrained model tmp folder: https://drive.google.com/file/d/12Lil0tkNPh1WZeR7YbrFbYDUER63bkTt/view?usp=sharing
-2. Put tmp folder in root directory
-3. Run `pip install -r requirements.txt; python setup.py develop`
-4. Follow instructions for generating summaries for source code
-5. If you get an error for index_select(), check torch version and downgrade (version 1.4.0 worked for me)
+1. Run `pip install -r requirements.txt; python setup.py develop`
+2. Download Pretrained model: https://drive.google.com/file/d/12Lil0tkNPh1WZeR7YbrFbYDUER63bkTt/view?usp=sharing
+3. Create a `tmp` folder in the root directory and place model files within.
+4. In the scripts directory, run `python run.py` to summarize a piece of code in `data/java/code.java`. The command can also take a file in `data/java` as an argument, including a JSON file. See `data/java/code.json` for format.
+5. If you get an error for index_select(), check torch version and downgrade. On MacOS version 1.4 was needed. I used conda to create a python 3.6 environment and download pytorch 1.4.
+
+### Installing C2NL
 
 You may consider installing the C2NL package. C2NL requires Linux and Python 3.6 or higher. It also requires installing PyTorch version 1.3. Its other dependencies are listed in requirements.txt. CUDA is strongly recommended for speed, but not necessary.
 
